@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkcovalon_guide=self.webpackChunkcovalon_guide||[]).push([[3794],{8985:e=>{e.exports=JSON.parse('{"title":"Player\'s Guide","slug":"/category/players-guide","permalink":"/covalon-guide/docs/category/players-guide","navigation":{"next":{"title":"Manage Docs Versions","permalink":"/covalon-guide/docs/players-guide/manage-docs-versions"}}}')}}]);
