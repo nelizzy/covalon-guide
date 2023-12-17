@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcovalon_guide=self.webpackChunkcovalon_guide||[]).push([[592],{1174:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/covalon-guide/blog/tags/facebook","allTagsPath":"/covalon-guide/blog/tags","count":1,"unlisted":false}')}}]);
