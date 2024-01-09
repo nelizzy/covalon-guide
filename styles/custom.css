@@ -1,0 +1,189 @@
+/*=======---  Example CSS styling  ---=======*/
+/* Any CSS here will apply to your document! */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Eczar:800|Roboto+Condensed|Tauri|Teko:500|Changa+One|Gelasio|DM+Serif+Text:400i&display=swap');
+
+:root {
+	--Header_Color_Main: #58180D;
+	--Header_Color_Chapter: #02256E;
+}
+
+.page{
+	/* A4 Page Size */
+	width  : 210mm;
+	height : 310mm; 
+	columns: 1;
+}
+.page .columnWrapper {
+	columns: 2;
+}
+
+/* HEADERS */
+.page h1 {
+	font-family: Eczar;`
+	font-size: 5em;
+	text-align: center;
+	color: var(--Header_Color_Main);
+}
+.page h2 {
+	font-family: Eczar;
+	font-size: 2.25em;
+  text-align: center;
+	color: var(--Header_Color_Chapter);
+}
+.page h3 {
+	font-family: Teko;
+	border-bottom: 0px;
+	font-size: 2em;
+}
+.page h4 {
+	font-family: Tauri;
+	border-bottom: 1px solid black;
+	color: black;
+	text-transform: uppercase;
+}
+.page h5 {
+	font-family: Tauri;
+	text-transform: uppercase;
+}
+.page h6 {
+	background-color: #002664;
+	color: #EDE3C8;
+	border-bottom: 1px solid #002664;
+	margin-bottom: 5px;
+	padding-left: 8px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	font-size: 1.25em;
+	font-family: 'Tauri', sans-serif;
+	text-transform: uppercase;
+	border-radius: 12px 12px 0px 0px;
+}
+.page h7 {
+  background-color: #002664;
+	color: #EDE3C8;
+	border-bottom: 1px solid #002664;
+	margin-bottom: 5px;
+	padding-left: unset;
+	padding-top: 5px;
+	padding-bottom: 3px;
+	font-size: 1.25em;
+	font-family: 'Tauri', sans-serif;
+	text-transform: uppercase;
+
+}
+
+.page .subtitle {
+	display: block;
+	column-span: all;
+	-moz-column-span: all;
+	-webkit-column-span: all;
+	text-align: center;
+	font-family: Gelasio;
+	font-size: 1.4em;
+	font-style: oblique;
+	font-weight: bold;
+	color: var(--Header_Color_Main);
+}
+
+.page hr {
+	display: block;
+	visibility: visible;
+	width: 100%;
+	border: 0px;
+	border-bottom: 1px solid black;
+	margin: 3px 0px;
+}
+
+.page .titleSeparator {
+	display: block;
+	column-span: all;
+	-moz-column-span: all;
+	-webkit-column-span: all;
+	height: 35px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	background-color: var(--Header_Color_Main);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: 0px 10px;
+	-webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155.97 4.83"><path d="M71.9 0c-.32 0-.64.06-.94.16-.35.12-.7.34-1.18.6a4.1 4.1 0 0 1-1.04.5H0v.46h70.63l-.06.33c-.04.26.17.48.32.6s.52.3.52.3l-.18-.42c-.2-.5.3-.98.84-.88.54.1.94.15 1.2 1.25.2.77 1.41 1.94 2.65 1.93.69-.01 1.25-.15 1.65-.52l.42-.53.41.53c.4.37.97.5 1.65.52 1.24.01 2.46-1.16 2.65-1.93.26-1.1.67-1.15 1.2-1.25.54-.1 1.05.38.84.88l-.18.42s.37-.18.52-.3c.16-.12.36-.34.32-.6l-.05-.33h70.62v-.46H87.24a4.1 4.1 0 0 1-1.04-.5c-.48-.26-.84-.48-1.18-.6-.6-.2-1.3-.23-1.83 0-.53.22-.78.41-1.11.93l-.4.62-.25-.31c-.14-.17-.5-.38-.68-.43-.45-.11-1.12.17-1.3.49-.16.31-.05.75.27.98-.1-.33.03-.8.75-.6.24.1.31.24.31.58 0 .93-1.23 1.44-1.89.78-.22-.23-.3-.45-.3-.97 0-.57.13-.73.33-.98.13-.17.14-.15.45-.36-.17 0-.78.23-1 .47l-.38.42-.39-.42a2.08 2.08 0 0 0-1-.47c.3.2.32.19.46.36.19.25.31.41.31.98 0 .52-.06.74-.29.97-.66.66-1.89.15-1.89-.78 0-.34.08-.48.32-.58.72-.2.85.27.75.6.3-.23.43-.67.26-.98-.17-.32-.85-.6-1.3-.5-.18.06-.54.27-.67.44l-.25.3-.4-.61c-.34-.52-.59-.7-1.12-.93A2.21 2.21 0 0 0 71.9 0z"/></svg>');
+}
+
+
+/*
+Icons
+Font Source: https://www.reddit.com/r/Pathfinder2e/comments/d83hq2/pathfinder_2e_actions_font
+Converted to WOFF2 by Transfonter - https://transfonter.org
+*/
+
+@font-face {
+    font-family: 'Pathfinder2eActions';
+    src: url('data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAAPUAA0AAAAADXQAAAOCAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYGYACBBAgEEQgKkTiMcAsmAAE2AiQDSAQgBYMhB0YbHgoRVZsPyX4c5OaiK4gkW0ukgENeIzk6D3I+/99p971BAU1KepBdp1nA7unfAubh3fXqf6DmEQXaQg8DTOzMbzvCo6jdzvdAHCBEmd3E5fzpsx7fWr/IIg/k18bmpngvn0jhUxuzBAPtAinBsVBSQM+CSuH5Ig8GAjAEAABFEGYINszJTHBADz0CYKqGIx9CCs1RXEBzJpYqvhntGIkQ2iP8j1Y7i+FaDdNGHdyCPU0pA7DEIBTE6nML2DLF0BUhRbpMpcq1aCfR0BYgBJ6vXhc619kOdbCtbW5Ty1uGoI+tqoMAkD8UAJgDAHdAJdAOMBsAALCAQBQAMPQZYJCQpvsMQjFpH094kWX6+YiEfRk8l6mvapvKGnBGbKWD16+rKK+UyxMVsjSA7xucGV0eyUOoMVT1qinJlIGqyvKS4tK6dlFuK2+p3OB1IMoWt3B4hyUryCj7xbDvZs/1lv36k8P3gt4bzY4LbKQttRYdiFjnsS/mUMAmu0W2cy0XQtHdbVjYz5xB99bAl6Wurmqx3uLnwoXqC4Hq3oqiqBW1u9f06QsXLVw4fbqXt5cXlhsMGzJ+3Pixw4ayJGylVD2mI8dBHpKex+2t3buZf6i97eZ1//8938V83us3Hj5ITp4xc+q0yIz3b7uOOnn7urt5+aD4f19qnRiSZ2r2NCl7xikT1fP7T6ycrmt2fitNOTFt4qYvVoJrxXrHgqd9LIeclqWJ41s6naSMkFPnN9ONkpMzk5o0/fe8tr/37mITfdfleN/d8BtTRgBgF0HQ2K3D4m3oLp7rjEwMJYsABuDIEi9P/sQKQfsQAIF/17qeNZnEf9V1YV4AwKPttpIP+mpx/7v2Kl1MgC4KWQL0KrDavSaiYg4Iw7h56QEVAGQCdIHEWpC8BhLTtpAX0jRuSTGD2s1lMAhRIO3JAgEyNF8BDFlAjFA6LBBGEPt+thrhmMoJ8CwaQST1Qp5qKIQyNgJhNJrWz1IIR/Ba5hH9djR9wpNyRE2o+KdF7ieM9OvfpH0ijSwKoYHBQqzQiALx0LCAmLN0Leb2jBgci4H00YIFFGuhpZCo9dJOpBFKlKKNllpvvXQoJZL100MLjUxK0foXhIZMJAgVKJgg1nBcs8JQYQLECAihYCFKZVOto4kkAJqnB6ZNm4CCS//HCAXd/Kvv7SxZsWbDljsvPiJESZclR4UqAAA=') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.page .pf {
+	font-family: 'Pathfinder2eActions';
+	font-size: 24px;
+}
+.page .pf.one:before,
+.page .pf.action:before {
+	content: '1';
+}
+.page .pf.two:before,
+.page .pf.double:before {
+	content: '2';
+}
+.page .pf.three:before,
+.page .pf.triple:before {
+	content: '3';
+}
+.page .pf.zero:before,
+.page .pf.free:before {
+	content: '4';
+}
+.page .pf.reaction:before {
+	content: '5';
+}
+
+/* Tags */
+.page .tag {
+	font-family: 'Roboto Condensed', sans-serif;
+	border-color:#DAC68A;
+	border: 1px solid #DAC68A;
+	border-left: 2px solid #DAC68A;
+	border-right: 2px solid #DAC68A;
+	border-radius:2px;
+	background-color:#58180D;
+	color:white;
+	text-align:center;
+	margin-top:2px;
+	margin-right:2px;
+	min-width:30px;
+	float:left;
+	margin-bottom:-5px;
+	padding-left:3px;
+	padding-right:3px;
+	text-transform:uppercase;
+	height: 13px;
+}
+/*Item Rarity Tags */
+.page .tag.uncommon {
+	background-color:#98513D !important;
+}
+.page .tag.rare {
+	background-color:#002664 !important;
+}
+.page .tag.unique {
+	background-color:#54166E !important;
+}
+/* Creature Tags */
+.page .tag.align {
+	background-color:#576293 !important;
+}
+.page .tag.size {
+	background-color:#3B7B59 !important;
+}
