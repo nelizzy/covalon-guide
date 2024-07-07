@@ -5535,13 +5535,11 @@
   @media print {
     .brewRenderer {
       height:100%;
-      will-change: unset;
-      overflow-y: unset;
       overflow-x: clip;
     }
     .brewRenderer .pages {
       margin:0px;
-      overflow-y:unset
+
     }
     .brewRenderer .pages>.page {
       box-shadow:unset
