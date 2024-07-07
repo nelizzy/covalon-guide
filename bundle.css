@@ -3134,7 +3134,7 @@
       color:white
     }
     100% {
-      background-color:unset;
+      background-color:#2C3E50;
       color:unset
     }
   }
@@ -5535,10 +5535,13 @@
   @media print {
     .brewRenderer {
       height:100%;
-      overflow-y:unset
+      will-change: unset;
+      overflow-y: unset;
+      overflow-x: clip;
     }
     .brewRenderer .pages {
-      margin:0px
+      margin:0px;
+      overflow-y:unset
     }
     .brewRenderer .pages>.page {
       box-shadow:unset
