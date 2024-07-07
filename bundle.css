@@ -5471,7 +5471,6 @@
     border-spacing:0
   }
   .brewRenderer {
-    will-change:transform;
     overflow-y:scroll
   }
   .brewRenderer :where(.pages) {
