@@ -4052,13 +4052,13 @@
   }
   @font-face {
     font-family:BookInsanityRemake;
-    src:url('../../../fonts/5e/Bookinsanity.woff2');
+    src:url('../../../covalon-guide/fonts/5e/Bookinsanity.woff2');
     font-weight:normal;
     font-style:normal
   }
   @font-face {
     font-family:BookInsanityRemake;
-    src:url('../../../fonts/5e/Bookinsanity Bold.woff2');
+    src:url('../../../covalon-guide/fonts/5e/Bookinsanity Bold.woff2');
     font-weight:bold;
     font-style:normal
   }
