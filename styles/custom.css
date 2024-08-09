@@ -711,7 +711,7 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
   }
   
   #headerbox.headerLeft {
-      height:calc(100%*var(--zoom));
+      height:100%;
       width:15px;
       border-right:1px solid var(--Header_Color_Main);
   }
