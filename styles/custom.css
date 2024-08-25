@@ -12,8 +12,8 @@
 
 .page{
 	/* A4 Page Size */
-	width  : 210mm; 
-	height : 296.8mm; 
+	width  : 210mm;
+	height : 296.8mm;
 	columns: 1;
   padding-left: 55px;
   padding-right: 55px;
@@ -446,14 +446,14 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       border:2px solid;
       border-collapse: collapse;
       padding-top:.5cm;
-      
+
       &:first-child {
         visibility:hidden;
         border:unset;
       }
     }
   }
-  
+
   tbody tr td{
       background-color: #FFEBC3;
       border:1.5px solid;
@@ -478,13 +478,13 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
   .logo {
     top:100px;
     filter:unset;
-    
+
     img {
       width:750px;
       height:auto;
-    }   
+    }
   }
-  
+
   h1 {
     position:absolute;
     bottom: 120px;
@@ -497,7 +497,7 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
     text-align:center;
     filter: drop-shadow(0 0 1.5px #d6c58c) drop-shadow(0 0 0 #d6c58c) drop-shadow(0 0 0 #d6c58c) drop-shadow(0 0 0 #d6c58c) drop-shadow(0 0 0 #d6c58c) drop-shadow(0 0 0 #d6c58c) drop-shadow(0 0 0 #d6c58c) drop-shadow(0 0 0 #d6c58c);
   }
-  
+
   .banner {
     top:0;
     left:unset;
@@ -515,7 +515,7 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
     padding:0 10px 10px 30px;
     filter: none;
   }
-  
+
   .authors {
     position:absolute;
     bottom:70px;
@@ -524,7 +524,7 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
     font-size:20px;
     font-family:Eczar;
     color:#d6c58c;
-    
+
     filter: drop-shadow(0 0 0.5px var(--coverh1)) drop-shadow(0 0 0 var(--coverh1)) drop-shadow(0 0 0 var(--coverh1)) drop-shadow(0 0 0 var(--coverh1)) drop-shadow(0 0 0 var(--coverh1)) drop-shadow(0 0 0 var(--coverh1)) drop-shadow(0 0 0 var(--coverh1)) drop-shadow(0 0 0 var(--coverh1));
   }
 }
@@ -535,13 +535,13 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
   .logo {
     top:100px;
     filter:unset;
-    
+
     img {
       width:550px;
       height:auto;
-    }   
+    }
   }
-  
+
   h1 {
     margin-top:10px;
   }
@@ -549,7 +549,7 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
   /* hr {
   background:
   } */
-  
+
 }
 
 /* Page Numbers */
@@ -636,27 +636,27 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
   height: 100%;
   z-index: -1;
 }
-  
+
   /* -----  Quick Entry ----- */
   /* ------------------------ */
-  
-  
+
+
   :root {
       --zoom:1.1;  			/* 1=100%, 2=200%, etc 			*/
       --book:initial;  	/* initial=offset first page, 	*/
                           /* none=no offset of first page */
   }
- 
+
 
   /* -----  Setting up page spread ----- */
   /* ----------------------------------- */
-  
+
   .phb:last-of-type {
       visibility:hidden;
       height:0;
       padding:0;
   }
-  
+
     .pages {
     display:grid;
       width:calc(100%*var(--zoom));
@@ -670,15 +670,15 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       padding-top:30px;
       background-color: #2C3E50;
   }
-  
-  
-  
-  
+
+
+
+
   /* -----  Floating TOC ----- */
   /* ------------------------------------ */
-  
 
-  
+
+
   #headerbox {
       position:fixed;
       visibility:visible;
@@ -690,11 +690,11 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       text-rendering:auto;
       overflow:clip;
   }
-  
+
   #headerbox:hover {
       background:var(--HB_Color_Background);
   }
-  
+
   #headerbox.headerTop {
       width:calc(100%*var(--zoom));
       height:24px;
@@ -704,26 +704,26 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       column-rule:1px solid var(--Header_Color_Main);
       column-fill:balance;
   }
-  
+
   #headerbox.headerTop:hover {
       height:unset;
       padding-bottom:30px;
   }
-  
+
   #headerbox.headerLeft {
       height:100%;
       width:15px;
       border-right:1px solid var(--Header_Color_Main);
   }
-  
+
   #headerbox.headerLeft:hover {
       width:20%;
       overflow-y:scroll;
       scrollbar-color:var(--Header_Color_Main) transparent;
       scrollbar-width:5px;
   }
- 
-  
+
+
   #headerbox p {
       font-size:18px;
       color:var(--Header_Color_Main);
@@ -732,16 +732,16 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       font-family: 'scaly sans';
       font-variant:small-caps;
   }
-  
+
   #headerbox a {
       color:var(--Header_Color_Main);
       text-decoration:none;
   }
-  
+
   #headerbox a:hover {
       text-decoration:underline;
   }
-  
+
   #headerbox h1 {
       font-family:'scaly sans caps';
       font-size:18px;
@@ -749,7 +749,7 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       color:var(--Header_Color_Main);
       column-span:all;
   }
-  
+
   #headerbox.headerLeft h1 {
       display:block;
       position:absolute;
@@ -758,15 +758,28 @@ Converted to WOFF2 by Transfonter - https://transfonter.org
       left:12px;
       top:51.4%;
   }
-  
+
   .toc {
       text-align:left;
       padding:0 20px;
   }
-  
+
   .toc h5 {
       column-span:all;
       text-align:center;
   }
-  
 
+
+/* Fix weird page sizes */
+.pages {
+  overflow-y: auto;
+  height: 100%;
+  width: calc(100% - 30px);
+  padding-bottom: 30px;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+
+.brewRenderer {
+  overflow-y: auto;
+}
