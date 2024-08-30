@@ -97,32 +97,33 @@ Covalon is a "living world" style tabletop RPG campaign, using the Pathfinder 2e
   - #### [{{ Covalon Gazetteer}}{{ 32}}](#p32)
     -  [{{ City District}}{{ 32}}](#p32)
     -  [{{ Market District}}{{ 39}}](#p39)
-    -  [{{ Encore District}}{{ 49}}](#p49)
-    -  [{{ Armory District}}{{ 53}}](#p53)
-    -  [{{ Lake District}}{{ 56}}](#p56)
-    -  [{{ Heart’s Forest}}{{ 61}}](#p61)
-    -  [{{ The Farm}}{{ 63}}](#p63)
-    -  [{{ Mountain View District}}{{ 64}}](#p64)
-    -  [{{ North Gate District}}{{ 65}}](#p65)
-    -  [{{ Expedition Districts and Outside Covalon}}{{ 68}}](#p68)
-  - #### [{{ Guilds}}{{ 70}}](#p70)
-    -  [{{ The Archivists}}{{ 70}}](#p70)
-    -  [{{ The Authors of Creation}}{{ 70}}](#p70)
-    -  [{{ Covalon Medical Society}}{{ 71}}](#p71)
-    -  [{{ The Servants of Terra}}{{ 71}}](#p71)
-    -  [{{ The Teacher’s Union}}{{ 71}}](#p71)
-    -  [{{ Trella’s Travellers}}{{ 72}}](#p72)
-    -  [{{ Alchemy, Riflery and Clockwork}}{{ 72}}](#p72)
-    -  [{{ The House of Dusk and Dawn}}{{ 73}}](#p73)
-    -  [{{ The Lightkeepers}}{{ 73}}](#p73)
-    -  [{{ Children of the Chicome}}{{ 73}}](#p73)
-    -  [{{ Covalon Historical Society}}{{ 74}}](#p74)
-    -  [{{ The Stouthearts}}{{ 74}}](#p74)
-    -  [{{ The Green Knights of the Square}}{{ 75}}](#p75)
-  - #### [{{ Pre-Cataclysm Civilizations}}{{ 76}}](#p76)
-  - #### [{{ Deities, Faith, and Ideologies}}{{ 93}}](#p93)
-
+    -  [{{ Encore District}}{{ 50}}](#p50)
+    -  [{{ Armory District}}{{ 54}}](#p54)
+    -  [{{ Lake District}}{{ 57}}](#p57)
+    -  [{{ Heart’s Forest}}{{ 62}}](#p62)
+    -  [{{ The Farm}}{{ 64}}](#p64)
+    -  [{{ Mountain View District}}{{ 65}}](#p65)
+    -  [{{ North Gate District}}{{ 66}}](#p66)
+    -  [{{ Expedition Districts and Outside Covalon}}{{ 69}}](#p69)
+  - #### [{{ Guilds}}{{ 71}}](#p71)
+    -  [{{ The Archivists}}{{ 71}}](#p71)
+    -  [{{ The Authors of Creation}}{{ 71}}](#p71)
+    -  [{{ Covalon Medical Society}}{{ 72}}](#p72)
+    -  [{{ The Servants of Terra}}{{ 72}}](#p72)
+    -  [{{ The Teacher’s Union}}{{ 72}}](#p72)
+    -  [{{ Trella’s Travellers}}{{ 73}}](#p73)
+    -  [{{ Alchemy, Riflery and Clockwork}}{{ 73}}](#p73)
+    -  [{{ The House of Dusk and Dawn}}{{ 74}}](#p74)
+    -  [{{ The Lightkeepers}}{{ 74}}](#p74)
+    -  [{{ Children of the Chicome}}{{ 74}}](#p74)
+    -  [{{ Covalon Historical Society}}{{ 75}}](#p75)
+    -  [{{ The Stouthearts}}{{ 75}}](#p75)
+    -  [{{ The Green Knights of the Square}}{{ 76}}](#p76)
+  - #### [{{ Pre-Cataclysm Civilizations}}{{ 77}}](#p77)
+  - #### [{{ Deities, Faith, and Ideologies}}{{ 94}}](#p94)
 }}
+
+
 
 
 
@@ -666,7 +667,7 @@ Gifts that require a weapon as a prerequisite to activate use a weapon you are h
 }}
 
 \column
-
+<br><br>
 ##### Table 3-2: Aspect Category Unlocks
 Gift | Expedition Finale to Unlock
 :---: | :---:
@@ -820,7 +821,7 @@ In addition to normal rewards, when your team wins a brawl, you recieve a Gladia
 - **Battlemaster:** 100 Tokens
 
 \column
-
+<br><br><br>
 
 ##### Advanced Brawl Rules
 - A "respawn" is triggered when a player's turn begins while they are unconscious with 0 hit points. They are immediately teleported back to their team's starting area, fully healed, and have all non-permanent effects removed from them (excluding afflictions acquired prior to the brawl). Their turn then ends, and if the game mode is deathmatch, the opposing team gains 1 point. (Any items they dropped as a result of being knocked unconscious remain in the original square that player was knocked unconscious in.)
@@ -977,7 +978,7 @@ Ancestry, heritage, background, class, and ability scores cannot be retrained. A
 There are a number of unique activities that can be performed in between adventures in Covalon. Activities with the downtime trait require you to spend your downtime to perform them, while activities with the exploration trait can be performed without significant time investment.
 
 \column
-
+<br><br><br>
 ##### Table 3-6: Retraining Costs
 
 Character Level | Retraining Cost (per day)
@@ -1041,7 +1042,7 @@ You invoke the power of the Heart of Terra to create a new creature from the sam
 
 In order for a creature to be approved for Raise a Creature, it must have the animal or beast tag, not be a Maw-related creature, not have any vaguely humanoid characteristics, not have the Spirit or Dragon tag, and must not be a custom or 3rd-party creature. Creatures created from Raise a Creature have their diet changed to consist of meat or plants commonly found in rations and have none of the abilities or spellcasting usually associated with their creature type (though they keep their forms of movement). Vanity pets become small or tiny in size, have their intelligence modifier reduced to -4, and lose the ability to speak any languages. Creatures hatched via the Raise a Creature activity can be traded to other players.
 
-\column
+<br>
 
 ##### SEEK TREATMENT
 -----
@@ -1056,6 +1057,7 @@ You visit Doc's Medical Center and solicit treatment from a healer. You are rest
 
 By paying 1 gp, the infirmary will also remove any conditions affecting you. The infirmary can remove any conditions (except doomed) as long as that condition was inflicted by an environmental effect, a creature or hazard with a level lesser than or equal to that of the settlement's, or by a spell with a level lesser than or equal to that of half the settlement's level (rounded up). (For a list of applicable conditions, see pages 618 - 623 in the Core Rulebook.)
 
+<br>
 
 ##### Cure a Curse
 -----
@@ -5321,24 +5323,47 @@ A relatively unkown deity, Xeesis is a god of secrets and hidden knowledge. They
 
 <div class='toc'>
 
-  - ### [{{ Covalon Player’s Guide}}{{ 1}}](#p1)
-
-    - #### [{{ What is Covalon?}}{{ 1}}](#p1)
-
-  - ### [{{ Chapter 1: Player Expectations}}{{ 3}}](#p3)
+- ### [{{ Covalon Player’s Guide}}{{ 1}}](#p1)
+  - #### [{{ What is Covalon?}}{{ 1}}](#p1)
+- ### [{{ Chapter 1: Player Expectations}}{{ 3}}](#p3)
   - #### [{{ Community Guidelines}}{{ 3}}](#p3)
-
+    -  [{{ 1. Player Age}}{{ 3}}](#p3)
+    -  [{{ 2. Be Civil}}{{ 3}}](#p3)
+    -  [{{ 3. Prohibited Themes}}{{ 3}}](#p3)
+    -  [{{ 4. Respect Other Users}}{{ 3}}](#p3)
+    -  [{{ 5. Additional Discord Accounts}}{{ 3}}](#p3)
+    -  [{{ 6. Self-Promotion}}{{ 3}}](#p3)
+    -  [{{ 7. Questions and Concerns}}{{ 3}}](#p3)
+    -  [{{ Community Guidelines}}{{ 3}}](#p3)
   - #### [{{ Roleplay Guidelines}}{{ 4}}](#p4)
-
+    -  [{{ 1. Avoid Powergaming}}{{ 4}}](#p4)
+    -  [{{ 2. Depiction of Adult Themes}}{{ 4}}](#p4)
+    -  [{{ 3. One Character per Player}}{{ 4}}](#p4)
+    -  [{{ 4. Dice Rolls}}{{ 4}}](#p4)
+    -  [{{ 5. Coercion and Pressure}}{{ 4}}](#p4)
+    -  [{{ 6. Player Vs. Player}}{{ 4}}](#p4)
   - #### [{{ Gameplay Guidelines}}{{ 4}}](#p4)
+    -  [{{ 1. Plan Your Turns}}{{ 4}}](#p4)
+    -  [{{ 2. Share the Spotlight}}{{ 4}}](#p4)
+    -  [{{ 3. Bookkeeping}}{{ 4}}](#p4)
+    -  [{{ 4. Metagaming}}{{ 4}}](#p4)
+    -  [{{ 5. Character Deaths}}{{ 4}}](#p4)
+    -  [{{ 6. Rules Arbitration}}{{ 4}}](#p4)
+    -  [{{ Text RP Formatting}}{{ 4}}](#p4)
   - #### [{{ Getting Started}}{{ 5}}](#p5)
   - #### [{{ Covalon Adventures}}{{ 5}}](#p5)
   - #### [{{ Covalon Creative Works Policy}}{{ 6}}](#p6)
 - ### [{{ Chapter 2: Character Creation}}{{ 7}}](#p7)
   - #### [{{ Character Creation Rules}}{{ 7}}](#p7)
-
+    -  [{{ Alternative Ability Boosts}}{{ 7}}](#p7)
+    -  [{{ Voluntary Flaws}}{{ 7}}](#p7)
+    -  [{{ Variant Rules}}{{ 7}}](#p7)
+    -  [{{ Character Option Rarity}}{{ 7}}](#p7)
+    -  [{{ Starting Equipment}}{{ 7}}](#p7)
   - #### [{{ Character Backstory}}{{ 8}}](#p8)
   - #### [{{ Web and App-Based Character Sheets}}{{ 8}}](#p8)
+    -  [{{ Pathbuilder 2E}}{{ 8}}](#p8)
+    -  [{{ Wanderer’s Guide}}{{ 8}}](#p8)
   - #### [{{ Requesting New Character Options}}{{ 8}}](#p8)
   - #### [{{ Rebuilding Your Character}}{{ 8}}](#p8)
   - #### [{{ Retiring Your Character}}{{ 9}}](#p9)
@@ -5384,30 +5409,77 @@ A relatively unkown deity, Xeesis is a god of secrets and hidden knowledge. They
   - #### [{{ Covalon Gazetteer}}{{ 32}}](#p32)
     -  [{{ City District}}{{ 32}}](#p32)
     -  [{{ Market District}}{{ 39}}](#p39)
-    -  [{{ Encore District}}{{ 49}}](#p49)
-    -  [{{ Armory District}}{{ 53}}](#p53)
-    -  [{{ Lake District}}{{ 56}}](#p56)
-    -  [{{ Heart’s Forest}}{{ 61}}](#p61)
-    -  [{{ The Farm}}{{ 63}}](#p63)
-    -  [{{ Mountain View District}}{{ 64}}](#p64)
-    -  [{{ North Gate District}}{{ 65}}](#p65)
-    -  [{{ Expedition Districts and Outside Covalon}}{{ 68}}](#p68)
-- ### [{{ Guilds}}{{ 70}}](#p70)
-  - #### [{{ The Archivists}}{{ 70}}](#p70)
-  - #### [{{ The Authors of Creation}}{{ 70}}](#p70)
-  - #### [{{ Covalon Medical Society}}{{ 71}}](#p71)
-  - #### [{{ The Servants of Terra}}{{ 71}}](#p71)
-  - #### [{{ The Teacher’s Union}}{{ 71}}](#p71)
-  - #### [{{ Trella’s Travellers}}{{ 72}}](#p72)
-  - #### [{{ Alchemy, Riflery and Clockwork}}{{ 72}}](#p72)
-  - #### [{{ The House of Dusk and Dawn}}{{ 73}}](#p73)
-  - #### [{{ The Lightkeepers}}{{ 73}}](#p73)
-  - #### [{{ Children of the Chicome}}{{ 73}}](#p73)
-  - #### [{{ Covalon Historical Society}}{{ 74}}](#p74)
-  - #### [{{ The Stouthearts}}{{ 74}}](#p74)
-  - #### [{{ The Green Knights of the Square}}{{ 75}}](#p75)
-- ### [{{ Pre-Cataclysm Civilizations}}{{ 76}}](#p76)
-  - #### [{{ Deities, Faith, and Ideologies}}{{ 93}}](#p93)
+    -  [{{ Encore District}}{{ 50}}](#p50)
+    -  [{{ Armory District}}{{ 54}}](#p54)
+    -  [{{ Lake District}}{{ 57}}](#p57)
+    -  [{{ Heart’s Forest}}{{ 62}}](#p62)
+    -  [{{ The Farm}}{{ 64}}](#p64)
+    -  [{{ Mountain View District}}{{ 65}}](#p65)
+    -  [{{ North Gate District}}{{ 66}}](#p66)
+    -  [{{ Expedition Districts and Outside Covalon}}{{ 69}}](#p69)
+  - #### [{{ Guilds}}{{ 71}}](#p71)
+    -  [{{ The Archivists}}{{ 71}}](#p71)
+    -  [{{ The Authors of Creation}}{{ 71}}](#p71)
+    -  [{{ Covalon Medical Society}}{{ 72}}](#p72)
+    -  [{{ The Servants of Terra}}{{ 72}}](#p72)
+    -  [{{ The Teacher’s Union}}{{ 72}}](#p72)
+    -  [{{ Trella’s Travellers}}{{ 73}}](#p73)
+    -  [{{ Alchemy, Riflery and Clockwork}}{{ 73}}](#p73)
+    -  [{{ The House of Dusk and Dawn}}{{ 74}}](#p74)
+    -  [{{ The Lightkeepers}}{{ 74}}](#p74)
+    -  [{{ Children of the Chicome}}{{ 74}}](#p74)
+    -  [{{ Covalon Historical Society}}{{ 75}}](#p75)
+    -  [{{ The Stouthearts}}{{ 75}}](#p75)
+    -  [{{ The Green Knights of the Square}}{{ 76}}](#p76)
+  - #### [{{ Pre-Cataclysm Civilizations}}{{ 77}}](#p77)
+  - #### [{{ Deities, Faith, and Ideologies}}{{ 94}}](#p94)
+    -  [{{ Aelia}}{{ 96}}](#p96)
+    -  [{{ A’shir, the Fated Flame}}{{ 96}}](#p96)
+    -  [{{ Axnos}}{{ 97}}](#p97)
+    -  [{{ The Circle of Stars}}{{ 98}}](#p98)
+    -  [{{ The Cheshire}}{{ 98}}](#p98)
+    -  [{{ Derelis}}{{ 99}}](#p99)
+    -  [{{ Erimia}}{{ 99}}](#p99)
+    -  [{{ Fah’rin, The Howling Blizzard}}{{ 100}}](#p100)
+    -  [{{ Fayne Lightfeet}}{{ 100}}](#p100)
+    -  [{{ Golgolgoss, The Watcher}}{{ 101}}](#p101)
+    -  [{{ The Grey Ocean}}{{ 101}}](#p101)
+    -  [{{ Gunvald}}{{ 102}}](#p102)
+    -  [{{ Gutom, The Bloody Rose}}{{ 102}}](#p102)
+    -  [{{ Heleniel, The Sin Seeker}}{{ 103}}](#p103)
+    -  [{{ Hestora}}{{ 103}}](#p103)
+    -  [{{ Heures}}{{ 104}}](#p104)
+    -  [{{ The Home of Hearth and Health}}{{ 104}}](#p104)
+    -  [{{ Kohtalo, Patron of Fate Forgers}}{{ 105}}](#p105)
+    -  [{{ Krun Darr}}{{ 105}}](#p105)
+    -  [{{ Kujani}}{{ 106}}](#p106)
+    -  [{{ Levona, Duchess of Hell}}{{ 106}}](#p106)
+    -  [{{ Lotus}}{{ 107}}](#p107)
+    -  [{{ Luxandra, The Everbloom}}{{ 107}}](#p107)
+    -  [{{ Lysanthyr, The Unending Delight}}{{ 108}}](#p108)
+    -  [{{ The Great and Noble Manaat Al-Karim}}{{ 108}}](#p108)
+    -  [{{ Maiden of the Garden}}{{ 109}}](#p109)
+    -  [{{ Mendastarum, Devourer of Truth}}{{ 109}}](#p109)
+    -  [{{ Nesdonin}}{{ 110}}](#p110)
+    -  [{{ Nimane, The Forge Matron}}{{ 110}}](#p110)
+    -  [{{ Noctune}}{{ 111}}](#p111)
+    -  [{{ Novissime, The Orchid Reaper}}{{ 111}}](#p111)
+    -  [{{ Oenos}}{{ 112}}](#p112)
+    -  [{{ The Path of the Great Spirits}}{{ 112}}](#p112)
+    -  [{{ Peko-Amuzo, The Trickster Prince}}{{ 113}}](#p113)
+    -  [{{ Riahn, He Who Eclipses the Stars}}{{ 113}}](#p113)
+    -  [{{ Seraphion, The Highest Throne}}{{ 114}}](#p114)
+    -  [{{ Sinnesh, The Den Mother}}{{ 114}}](#p114)
+    -  [{{ The Eyes}}{{ 115}}](#p115)
+    -  [{{ The Living Mandate}}{{ 115}}](#p115)
+    -  [{{ The Three Sisters}}{{ 116}}](#p116)
+    -  [{{ The World Weave}}{{ 117}}](#p117)
+    -  [{{ Trella, The Night Sky}}{{ 117}}](#p117)
+    -  [{{ Unmortus, The Dead Guardian}}{{ 118}}](#p118)
+    -  [{{ Veskahule}}{{ 118}}](#p118)
+    -  [{{ Xan’Zyx, the First Incarnation}}{{ 119}}](#p119)
+    -  [{{ Xeesis}}{{ 119}}](#p119)
+
 </div>
 
 
