@@ -1,21 +1,17 @@
 name: Modify and Deploy HTML
-
-on:
+'on':
   push:
-    branches: ["gh-pages"]
-  workflow_dispatch:
-
+    branches:
+      - gh-pages
+  workflow_dispatch: null
 permissions:
   contents: write
   pages: write
   id-token: write
-
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
-
 jobs:
-  # Build job
   build:
     needs: modify-html
     runs-on: ubuntu-latest
@@ -23,18 +19,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Modify index.html if it does not already contain the custom.css link
-        run: |
-        if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' index.html; then
-          echo "index.html does not contain the custom.css link; applying changes..."
-          sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html
-          sed -i '17,48d' index.html  # Delete a style element
-          sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html
-        else
-          echo "index.html already contains the custom.css link; no changes needed."
-        fi
+        run: >
+          if ! grep -q
+          'https://covalon.github.io/covalon-guide/styles/custom.css'
+          index.html; then
+            echo "index.html does not contain the custom.css link; applying changes..."
+            sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html
+            sed -i '17,48d' index.html  # Delete a style element
+            sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html
+          else
+            echo "index.html already contains the custom.css link; no changes needed."
+          fi
       - name: Modify gm.html if it does not already contain the custom.css link
-        run: |
-          if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' gm.html; then
+        run: >
+          if ! grep -q
+          'https://covalon.github.io/covalon-guide/styles/custom.css' gm.html;
+          then
             echo "gm.html does not contain the custom.css link; applying changes..."
             sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html
             sed -i '17,48d' gm.html  # Delete a style element
@@ -52,13 +52,11 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-
-  # Deployment job
   deploy:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: '${{ steps.deployment.outputs.page_url }}'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
