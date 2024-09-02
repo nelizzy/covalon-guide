@@ -28,7 +28,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-     - name: Modify index.html if it does not already contain the custom.css link
+    - name: Modify index.html if it does not already contain the custom.css link
       run: |
         if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' index.html; then
           echo "index.html does not contain the custom.css link; applying changes..."
