@@ -3,7 +3,7 @@ name: Modify and Deploy HTML
 on:
   push:
     branches:
-      - main  # or the branch used for GitHub Pages
+      - gh-pages  # or the branch used for GitHub Pages
 
 jobs:
   modify-html:
