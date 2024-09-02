@@ -63,6 +63,7 @@ jobs:
         else
           git commit -m "Automated HTML updates by GitHub Actions"
           git push origin gh-pages
+        fi
 
   deploy:
     needs: modify-html
