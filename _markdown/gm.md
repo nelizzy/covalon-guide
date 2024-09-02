@@ -1,6 +1,6 @@
 
 
-{{titlebar,width:60% Covalon GM's Guide rev BIG TESTING }}
+{{titlebar,width:60% Covalon GM's Guide rev 02.09.24 }}
 ::::
 {{wide
 # Covalon GM's Guide

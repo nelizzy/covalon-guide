@@ -1,4 +1,4 @@
-{{titlebar,width:60% Covalon Player's Guide rev DOIN A TEST }}
+{{titlebar,width:60% Covalon Player's Guide rev 02.09.24 }}
 
 
 
