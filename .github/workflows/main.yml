@@ -12,12 +12,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Debug - List Modified Files
+      run: |
+        echo "Modified files in this commit:"
+        echo "${{ toJson(github.event.head_commit.modified) }}"
+
     - name: Modify index.html if it or _markdown/index.md was modified
       if: |
         contains(github.event.head_commit.modified, 'index.html') &&
         contains(github.event.head_commit.modified, '_markdown/index.md')
       run: |
-        echo "index.html or _markdown/index.md was modified; applying changes..."
+        echo "index.html AND _markdown/index.md were modified; applying changes..."
         sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
         sed -i '17,48d' index.html  # Delete a style element
         sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
@@ -27,7 +32,7 @@ jobs:
         contains(github.event.head_commit.modified, 'gm.html') &&
         contains(github.event.head_commit.modified, '_markdown/gm.md')
       run: |
-        echo "gm.html or _markdown/gm.md was modified; applying changes..."
+        echo "gm.html AND _markdown/gm.md were modified; applying changes..."
         sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
         sed -i '17,48d' gm.html  # Delete a style element
         sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html  # Insert <link> tag at line 17
