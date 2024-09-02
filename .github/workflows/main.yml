@@ -12,30 +12,32 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Debug - List Modified Files
+    - name: Debug - List Modified Files Using git diff
       run: |
         echo "Modified files in this commit:"
-        echo "${{ toJson(github.event.head_commit.modified) }}"
+        git diff --name-only HEAD^ HEAD
 
-    - name: Modify index.html if it or _markdown/index.md was modified
-      if: |
-        contains(github.event.head_commit.modified, 'index.html') &&
-        contains(github.event.head_commit.modified, '_markdown/index.md')
+    - name: Modify index.html if both index.html and _markdown/index.md were modified
       run: |
-        echo "index.html AND _markdown/index.md were modified; applying changes..."
-        sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
-        sed -i '17,48d' index.html  # Delete a style element
-        sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
+        if git diff --name-only HEAD^ HEAD | grep -q '^index.html$' && git diff --name-only HEAD^ HEAD | grep -q '^_markdown/index.md$'; then
+          echo "Both index.html and _markdown/index.md were modified; applying changes..."
+          sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
+          sed -i '17,48d' index.html  # Delete a style element
+          sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
+        else
+          echo "index.html and _markdown/index.md were not both modified; skipping modifications."
+        fi
 
-    - name: Modify gm.html if it or _markdown/gm.md was modified
-      if: |
-        contains(github.event.head_commit.modified, 'gm.html') &&
-        contains(github.event.head_commit.modified, '_markdown/gm.md')
+    - name: Modify gm.html if both gm.html and _markdown/gm.md were modified
       run: |
-        echo "gm.html AND _markdown/gm.md were modified; applying changes..."
-        sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
-        sed -i '17,48d' gm.html  # Delete a style element
-        sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html  # Insert <link> tag at line 17
+        if git diff --name-only HEAD^ HEAD | grep -q '^gm.html$' && git diff --name-only HEAD^ HEAD | grep -q '^_markdown/gm.md$'; then
+          echo "Both gm.html and _markdown/gm.md were modified; applying changes..."
+          sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
+          sed -i '17,48d' gm.html  # Delete a style element
+          sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html  # Insert <link> tag at line 17
+        else
+          echo "gm.html and _markdown/gm.md were not both modified; skipping modifications."
+        fi
 
     - name: Commit changes
       run: |
