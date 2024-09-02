@@ -15,7 +15,7 @@ jobs:
     - name: Debug - List Modified Files Using git diff
       run: |
         echo "Modified files in this commit:"
-        git diff --name-only HEAD^ HEAD
+        git diff --name-only HEAD^ HEAD || git diff --name-only $(git hash-object -t tree /dev/null) HEAD
 
     - name: Modify index.html if both index.html and _markdown/index.md were modified
       run: |
