@@ -1,0 +1,40 @@
+name: Modify and Deploy HTML
+
+on:
+  push:
+    branches:
+      - main  # or the branch used for GitHub Pages
+
+jobs:
+  modify-html:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Modify HTML file
+      run: |
+        sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
+        sed -i '17,48d' index.html  # Delete a style element
+        sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add index.html
+        git commit -m "Automated HTML updates by GitHub Actions"
+        git push
+
+  deploy:
+    needs: modify-html  # Ensure this runs after modifications
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Deploy to GitHub Pages
+      run: |
+        # Assuming that deployment to GitHub Pages happens automatically, this step may involve simply pushing changes,
+        # or might require specific commands depending on your setup
+        echo "Deployment step here"
