@@ -15,21 +15,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  modify-html:
+  # Build job
+  build:
+    needs: modify-html
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        ref: gh-pages  # Ensure we are working on the gh-pages branch
-
-    - name: Verify current branch
-      run: |
-        echo "Current branch:"
-        git branch --show-current
-
-    - name: Modify index.html if it does not already contain the custom.css link
-      run: |
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Modify index.html if it does not already contain the custom.css link
+        run: |
         if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' index.html; then
           echo "index.html does not contain the custom.css link; applying changes..."
           sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html
@@ -38,50 +32,35 @@ jobs:
         else
           echo "index.html already contains the custom.css link; no changes needed."
         fi
+      - name: Modify gm.html if it does not already contain the custom.css link
+        run: |
+          if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' gm.html; then
+            echo "gm.html does not contain the custom.css link; applying changes..."
+            sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html
+            sed -i '17,48d' gm.html  # Delete a style element
+            sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html
+          else
+            echo "gm.html already contains the custom.css link; no changes needed."
+          fi
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
 
-    - name: Modify gm.html if it does not already contain the custom.css link
-      run: |
-        if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' gm.html; then
-          echo "gm.html does not contain the custom.css link; applying changes..."
-          sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html
-          sed -i '17,48d' gm.html  # Delete a style element
-          sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html
-        else
-          echo "gm.html already contains the custom.css link; no changes needed."
-        fi
-
-    - name: Show git status
-      run: git status
-
-    - name: Commit changes
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add index.html gm.html
-        if git diff-index --quiet HEAD; then
-          echo "No changes to commit."
-        else
-          git commit -m "Automated HTML updates by GitHub Actions"
-          git push origin gh-pages
-        fi
-
+  # Deployment job
   deploy:
-    needs: modify-html
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout latest code
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
