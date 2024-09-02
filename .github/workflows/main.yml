@@ -12,14 +12,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Debug - List Modified Files Using git diff
+    - name: Debug - List Modified Files
       run: |
         echo "Modified files in this commit:"
-        git diff --name-only HEAD^ HEAD || git diff --name-only $(git hash-object -t tree /dev/null) HEAD
+        git show --name-only --pretty="" HEAD
 
     - name: Modify index.html if both index.html and _markdown/index.md were modified
       run: |
-        if git diff --name-only HEAD^ HEAD | grep -q '^index.html$' && git diff --name-only HEAD^ HEAD | grep -q '^_markdown/index.md$'; then
+        if git show --name-only --pretty="" HEAD | grep -q '^index.html$' && git show --name-only --pretty="" HEAD | grep -q '^_markdown/index.md$'; then
           echo "Both index.html and _markdown/index.md were modified; applying changes..."
           sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
           sed -i '17,48d' index.html  # Delete a style element
@@ -30,7 +30,7 @@ jobs:
 
     - name: Modify gm.html if both gm.html and _markdown/gm.md were modified
       run: |
-        if git diff --name-only HEAD^ HEAD | grep -q '^gm.html$' && git diff --name-only HEAD^ HEAD | grep -q '^_markdown/gm.md$'; then
+        if git show --name-only --pretty="" HEAD | grep -q '^gm.html$' && git show --name-only --pretty="" HEAD | grep -q '^_markdown/gm.md$'; then
           echo "Both gm.html and _markdown/gm.md were modified; applying changes..."
           sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
           sed -i '17,48d' gm.html  # Delete a style element
@@ -54,6 +54,3 @@ jobs:
     - name: Deploy to GitHub Pages
       run: |
         echo "Deployment completed - GitHub Pages will automatically serve the updated content."
-
-
-test
