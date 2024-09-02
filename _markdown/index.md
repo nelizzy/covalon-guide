@@ -1,4 +1,4 @@
-{{titlebar,width:60% Covalon Player's Guide rev test }}
+{{titlebar,width:60% Covalon Player's Guide rev final test? }}
 
 
 
@@ -6,7 +6,6 @@
 :
 
 {{wide
-![](https://covalon.github.io/covalon-guide/assets/covalon/test.png) { width: 300px; height: 300px;}
 ![Covalon Logo](https://i.ibb.co/2nWwNHT/Covalon-Logo-Bold-Wood-Cropped-Small.webp) {width:50%,margin-left:160px,margin-right:auto}
 }}
 
