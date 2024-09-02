@@ -28,23 +28,27 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Modify index.html if it was modified
-      if: |
-        !grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' index.html
+     - name: Modify index.html if it does not already contain the custom.css link
       run: |
-        echo "index.html was modified; applying changes..."
-        sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
-        sed -i '17,48d' index.html  # Delete a style element
-        sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
+        if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' index.html; then
+          echo "index.html does not contain the custom.css link; applying changes..."
+          sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
+          sed -i '17,48d' index.html  # Delete a style element
+          sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
+        else
+          echo "index.html already contains the custom.css link; no changes needed."
+        fi
 
-    - name: Modify gm.html if it was modified
-      if: |
-        !grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' gm.html
+    - name: Modify gm.html if it does not already contain the custom.css link
       run: |
-        echo "gm.html was modified; applying changes..."
-        sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
-        sed -i '17,48d' gm.html  # Delete a style element
-        sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html  # Insert <link> tag at line 17
+        if ! grep -q 'https://covalon.github.io/covalon-guide/styles/custom.css' gm.html; then
+          echo "gm.html does not contain the custom.css link; applying changes..."
+          sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
+          sed -i '17,48d' gm.html  # Delete a style element
+          sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html  # Insert <link> tag at line 17
+        else
+          echo "gm.html already contains the custom.css link; no changes needed."
+        fi
 
     - name: Commit changes
       run: |
