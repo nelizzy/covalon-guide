@@ -6,6 +6,7 @@
 :
 
 {{wide
+![](https://raw.githubusercontent.com/covalon/covalon-guide/gh-pages/assets/covalon/test.bmp)
 ![Covalon Logo](https://i.ibb.co/2nWwNHT/Covalon-Logo-Bold-Wood-Cropped-Small.webp) {width:50%,margin-left:160px,margin-right:auto}
 }}
 
