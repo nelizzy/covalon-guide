@@ -1,4 +1,4 @@
-{{titlebar,width:60% Covalon Player's Guide rev DOIN A BIG HECKING TEST }}
+{{titlebar,width:60% Covalon Player's Guide rev DOIN A TEST }}
 
 
 

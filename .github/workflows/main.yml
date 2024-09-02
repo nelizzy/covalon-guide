@@ -3,7 +3,7 @@ name: Modify and Deploy HTML
 on:
   push:
     branches:
-      - gh-pages  # or the branch used for GitHub Pages
+      - gh-pages  # This is the branch used for GitHub Pages
 
 jobs:
   modify-html:
@@ -12,29 +12,38 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Modify HTML file
+    - name: Modify index.html if it or _markdown/index.md was modified
+      if: |
+        contains(github.event.head_commit.modified, 'index.html') &&
+        contains(github.event.head_commit.modified, '_markdown/index.md')
       run: |
+        echo "index.html or _markdown/index.md was modified; applying changes..."
         sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' index.html  # Replace domain
         sed -i '17,48d' index.html  # Delete a style element
         sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' index.html  # Insert <link> tag at line 17
+
+    - name: Modify gm.html if it or _markdown/gm.md was modified
+      if: |
+        contains(github.event.head_commit.modified, 'gm.html') &&
+        contains(github.event.head_commit.modified, '_markdown/gm.md')
+      run: |
+        echo "gm.html or _markdown/gm.md was modified; applying changes..."
+        sed -i 's/assets.dungeonsandmarkdown.spjak.com/covalon.github.io\/covalon-guide/g' gm.html  # Replace domain
+        sed -i '17,48d' gm.html  # Delete a style element
+        sed -i '17i<link href="https://covalon.github.io/covalon-guide/styles/custom.css" rel="stylesheet" />' gm.html  # Insert <link> tag at line 17
 
     - name: Commit changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add index.html
-        git commit -m "Automated HTML updates by GitHub Actions"
-        git push
+        git add index.html gm.html
+        git diff --quiet || git commit -m "Automated HTML updates by GitHub Actions"
+        git push origin gh-pages  # Push changes back to the gh-pages branch
 
   deploy:
     needs: modify-html  # Ensure this runs after modifications
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
     - name: Deploy to GitHub Pages
       run: |
-        # Assuming that deployment to GitHub Pages happens automatically, this step may involve simply pushing changes,
-        # or might require specific commands depending on your setup
-        echo "Deployment step here"
+        echo "Deployment completed - GitHub Pages will automatically serve the updated content."
